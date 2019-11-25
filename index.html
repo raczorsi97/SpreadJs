@@ -1,0 +1,270 @@
+<html>
+	<head>
+		<link href="13.0.0/gc.spread.sheets.13.0.0.css" rel="stylesheet">
+        <link href="13.0.0/gc.spread.sheets.excel2013white.13.0.0.css" rel="stylesheet">
+        <link href="http://localhost/Css/Css/spreadsheetReqv13.css?ver=7.25.0.392" rel="stylesheet">
+	</head>
+	<body>
+        <div class="ss" id="ss" style="width: 50%; height: 450px; border: 1px solid gray"></div>
+		
+        <script src="jquery-1.7.min.js" type="text/javascript"></script>
+        <script src="http://local.blacklineondemand.com/ScriptResource.axd?d=MRPcAQKuwmHBb5cZaBjaMzMBYpgyJkqNCFozLYiGVgvWpZOIJYHeRq9eszwiyvK8WlJ3wUwZ_xDlKAWHdzC2bENs927UIlko6p9s_W04kQ2AZN3TdVPFDzFIq_EBG-J2Zsynbg2&t=f2cd5c5"></script>
+        <script src="http://localhost/Js/js/bl_radcallback.js"></script>
+		<script src="13.0.0/gc.spread.sheets.all.13.0.0.min.js" type="text/javascript"></script>
+        <script src="13.0.0/gc.spread.excelio.13.0.0.min.js" type="text/javascript"></script>
+        <script>
+            GC.Spread.Sheets.LicenseKey = '252382009672470060500615';
+        </script>
+        <script src="http://local.blacklineondemand.com/assets/global/libs/handlebars/handlebars-1.0.0-patched.js"></script>
+        <script src="http://local.blacklineondemand.com/assets/global/js/handlebars.helpers.js"></script>
+        <script type="text/javascript" id="config-bundles2" src="http://local.blacklineondemand.com/bundles2?Version=7.25.0.418"></script>
+        <script type="text/javascript" id="environmentRef" src="http://local.blacklineondemand.com/environment/information?c=en-US"></script>
+        <script type="text/javascript">
+                        BLStemplates = [
+            "~/bundles/modules/navigation/tmpl"
+            ];
+        </script>
+        <script src="http://local.blacklineondemand.com/assets/global/js/polyfill.js"></script>
+        <script src="http://local.blacklineondemand.com/assets/global/js/bls.js"></script>
+        <script src="http://local.blacklineondemand.com/assets/global/js/bls.references.js"></script>
+        <script src="http://local.blacklineondemand.com/assets/global/js/bls.ghost.js"></script>
+        <script src="http://local.blacklineondemand.com/assets/global/js/bls.ghost.event.js"></script>
+        <script src="http://local.blacklineondemand.com/assets/global/js/bls.ghost.locksmith.js"></script>
+        <script src="http://local.blacklineondemand.com/assets/global/js/bls.ghost.ui.js"></script>
+        <script src="http://local.blacklineondemand.com/assets/global/js/bls.ghost.ui.dropdown.js"></script>
+        <script src="http://local.blacklineondemand.com/assets/global/js/bls.ghost.legacy.js"></script>
+        <script src="http://local.blacklineondemand.com/assets/global/js/bls.ghost.lookup.js"></script>
+        <script src="http://local.blacklineondemand.com/assets/global/js/bls.utils.js"></script>
+        <script src="http://local.blacklineondemand.com/assets/global/js/bls.require.js"></script>
+        <script src="http://local.blacklineondemand.com/assets/global/js/bls.apps.js"></script>
+        <script src="http://local.blacklineondemand.com/assets/global/js/bls.hub.js"></script>
+        <script src="http://local.blacklineondemand.com/assets/global/js/bls.core.js"></script>
+        <script src="http://local.blacklineondemand.com/assets/global/js/bls.widgets.js"></script>
+        <script src="http://local.blacklineondemand.com/assets/global/js/bls.modules.js"></script>
+        <script src="http://local.blacklineondemand.com/assets/global/js/bls.modules.helpers.js"></script>
+        <script src="http://local.blacklineondemand.com/assets/global/js/bls.solicit.js"></script>
+        <!-- <script src="http://local.blacklineondemand.com/assets/global/js/bls.header.js"></script> -->
+        <script type="text/javascript">
+            BLS.modules = BLS.modules || {};
+            BLS.modules.headerConfiguration = BLS.modules.headerConfiguration || {};
+
+            BLS.modules.headerConfiguration.roles = BLS.modules.headerConfiguration.roles || {};
+            BLS.modules.headerConfiguration.periods = BLS.modules.headerConfiguration.periods || {};
+            BLS.modules.headerConfiguration.periods.services = BLS.modules.headerConfiguration.periods.services || {};
+            BLS.modules.headerConfiguration.periods.services.endpoints = BLS.modules.headerConfiguration.periods.services.endpoints || {};
+
+            
+            BLS.modules.headerConfiguration.periods.services.endpoints.list = "/api/period/reconciliation/list?assignmentId=5323&restrictAuditors=False&assignmentType=A&selectedPeriodId=42&routeName=RecTemplate";
+            
+
+            // BLS.header.retrieveConfig();
+        </script>
+        <script type="text/javascript">
+            BLS.modules._setConfig("atlas.i18n", {
+                url: "/api/resource",
+                resources: {
+                    common: {
+                        allFieldTypes: "All Field Types",
+                        apply: "Apply",
+                        cancel: "Cancel",
+                        clearAll: "Clear All",
+                        column: "Column",
+                        columns: "Columns",
+                        collapse: "Collapse",
+                        confirm: "Confirm",
+                        dateFields: "Date Fields",
+                        defaultFilters: "Default Filters",
+                        edit: "Edit",
+                        expand: "Expand",
+                        field: "Field",
+                        in: "In",
+                        lDefault: "Default", // avoid reserved javascript keyword 'default'
+                        lDelete: "Delete", // avoid reserved javascript keyword 'delete'
+                        logic: "Logic",
+                        numericFields: "Numeric Fields",
+                        operator: "Operator",
+                        search: "Search",
+                        selected: "Selected",
+                        nSelected: "{0} Selected",
+                        textFields: "Text Fields",
+                        value: "Value",
+                        addSort: "Add Sort",
+                        addFields: "Add Fields"
+                    },
+                    grid: {
+                        clear: "Clear",
+                        filterByField: "Filter by {0}",
+                        noResultsFound: "No results found.",
+                        showingX: "Showing {0}",
+                        saveCurrentView: "Save As..",
+                        applySavedView: "Apply a Saved View",
+                        addRemoveColumns: "Add / Remove Columns",
+                        multiSortConfiguration: "Multi Sort Configuration",
+                        viewOptions: "View Options",
+                        save: "Save",
+                        cancel: "Cancel",
+                        apply: "Apply",
+                        name: "Name",
+                        pageLabel: "Page",
+                        removeThisField: "Remove this Field",
+                        action: "Action",
+                        yes: "Yes",
+                        no: "No",
+                        defaultFilters: "Default Filters",
+                        groupCount: "Group Count",
+        
+                        export: {
+                            filename: "Export_{0}.{1}",
+                            success: "Your data was successfully exported.",
+                            error: "Whoops! We ran into an issue while exporting your data. Please refresh the page and try again. If the problem persists, please contact your System Administrator."
+                        },
+        
+                        footer: {
+                            of: "of"
+                        }
+                    },
+                    filterConsole: {
+                        warnings: {
+                            missingFilter: "You have referred to a filter that is not present. That filter will be ignored.",
+                        },
+                        errors: {
+                            invalidQuery: "Your filter query isn't valid. Please edit it and try again."
+                        },
+                        filterApplied: "Filter Applied",
+                        filtersApplied: "Filters Applied",
+                        createAFilterWithExample: "Create a filter (i.e. GL Balance > 2,000)",
+                        showAllColumns: "Show All Columns",
+                        showHiddenFields: "Show Hidden Fields",
+                        childrenSelected: "Indicates {0} Children are Selected",
+                        clearFilters: "Clear Filters"
+                    },
+                    filters: {
+                        contains: "contains",
+                        doesNotContain: "does not contain",
+                        endsWith: "ends with",
+                        startsWith: "starts with",
+                        equals: "equals",
+                        greaterOrEqual: "greater or equal",
+                        greaterThan: "greater than",
+                        in: "In",
+                        isEmpty: "is empty",
+                        isNotEmpty: "is not empty",
+                        lessOrEqual: "less or equal",
+                        lessThan: "less than",
+                        notEqual: "does not equal",
+                        notIn: "Not In",
+                        between: "between"
+                    },
+                    dateSelector: {
+                        date: "Date",
+                        time: "Time",
+                        clear: "Clear",
+                        apply: "Apply",
+                        today: "Today",
+                        dateAdvancedOptions: "Date Advanced Options",
+                        selectADate: "Select a Date",
+                        emptyDataFields: "Empty Data Field Only"
+                    },
+                    dateRange: {
+                        today: "Today",
+                        between: "Between",
+                        singleDate: "Single Date ",
+                        clear: "Clear",
+                        apply: "Apply",
+                        dateRange: "Date Range",
+                        dateAdvancedOptions: "Date Advanced Options",
+                        cancel: "Cancel",
+                        selectADate: "Select a Date",
+                        range: "Range"
+                    },
+                    filterPanel: {
+                        advancedOptions: "Advanced Options",
+                        tree: "Tree",
+                        treeView: "Tree View",
+                        includeFieldChildren: "Include {0} Children",
+                        treeViewNotAvailable: "Tree Not Available"
+                    },
+                    treeView: {
+                        actions: "Actions",
+                        selectAll: "Select All",
+                        clearAll: "Clear All",
+                        expandAll: "Expand All",
+                        collapseAll: "Collapse All",
+                        selectAllLevel: "Select All Level {0}",
+                        selectThisLevel: "Select Only This Level",
+                        selectLevelAndChildren: "Select Level and Children",
+                        cancel: "Cancel",
+                        apply: "Apply",
+                        search: "Search",
+                        addFields: "Add Fields"
+                    },
+                    listView: {
+                        selectAll: "Select all ({0})",
+                        clearAll: "Clear All",
+                        clear: "Clear ({0})",
+                        filter: "Filter"
+                    },
+                    dataView: {
+                        saveAs:	"Save As",
+                        save:	"Save",
+                        none:	"None",
+                        name:	"Name",
+                        namePlaceholder:	"Name",
+                        description:	"Description",
+                        descriptionPlaceholder:	"Description",
+                        makeThisViewDefault:	"Make This View My Default View",
+                        deleteMyViewConfirmation:	"Are you sure you want to delete the current My View ({0})? The grid filters and presets will be reverted to their default state.",
+                        makeThisViewDefaultConfirmation:	"Are you sure? This My View will be presented to you every time you access this page.",
+                        renameView:	"Enter a new name for your My View",
+                        rename:	"Rename",
+                        updateViewConfirmation:	"Updating the current My View will replace all presets and filters. Please confirm if you want to proceed.",
+                        saveViewTitle: "Save View",
+                        renameViewTitle: "Rename View",
+                        deleteViewTitle: "Delete View",
+                        confirmDefaultViewTitle:"Confirm Default View",
+                        updateViewTitle: "Update View",
+                        defaultView: "Default View",
+                        updateViewWarningMessage: "Warning: Updating this view will replace all presets and filters",
+                        updateViewMessage: "Are you sure you want to update \"{0}\"?",
+                        defaultViewWarningMessage: "Warning: This view will be presented to you each time you access this page",
+                        defaultViewMessage: "Are you sure you want to make \"{0}\" your default view?",
+                        deleteViewWarningMessage: "Warning: All grid filters and presets will revert to their default state",
+                        deleteViewMessage: "Are you sure you want to delete \"{0}\"?"
+                    },
+                    columnSelector: {
+                        title: "Fields"
+                    },
+                    sortSelector: {
+                        title: "Sorting"
+                    },
+                    groupSelector: {
+                        title: "Group By"
+                    },
+                    notification: {
+                        error: "{0} Error(s) Found"
+                    },
+                    errors: {
+                        dataRetrieval: "Oops! There was a problem retrieving the requested data. Please refresh the page and try again. If the problem persists, please contact your System Administrator."
+                    },
+                    sidebar: {
+                        title: "Grid Options"
+                    }
+                }
+            });
+        </script>
+
+        <script src="http://localhost:4321/js/atlas.min.js"></script>
+        <link href="http://local.blacklineondemand.com/assets/global/modules/fbomb/css/fbomb-alt-theme.css" rel="stylesheet">
+        <link href="http://local.blacklineondemand.com/assets/global/modules/fbomb/css/fbomb.css" rel="stylesheet">
+        <script src="http://local.blacklineondemand.com/assets/global/modules/fbomb/js/fbomb.js"></script>
+        <script src="http://local.blacklineondemand.com/assets/global/libs/kendo/js/kendo.web.min.v2015.2.805.js"></script>
+        <script src="http://local.blacklineondemand.com/assets/global/libs/kendo/js/kendo.aspnetmvc.min.js"></script>
+        <script src="http://local.blacklineondemand.com/assets/global/libs/kendo/js/cultures/kendo.culture.en-US.min.js"></script>
+        <script src="http://local.blacklineondemand.com/assets/global/js/bls.overrides.js"></script>
+        <script src="http://localhost/Js/js/common.js"></script>
+        <script src="http://local.blacklineondemand.com/js/Spreadsheet.js?ver=7.25.0.418"></script>
+        
+        <!-- <script type="text/javascript" id="" src="//whatfix.com/71673a90-65d9-11e9-a710-04013d24cd02/embed/embed.nocache.js"></script> -->
+        <script type="text/javascript" id="">window._wfx_onload=function(){window._wfx_settings.custom_data={domain_name:window.location.hostname}};</script>
+	</body>
+</html>
